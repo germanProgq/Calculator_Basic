@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    inset: 0;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: black;
+    outline: none;
+    color: white;
+}
+.container {
+    padding: 10px 20%
+}
+.calculator {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(60vw);
+    height: calc(80vh);    
+    padding: 20px 2vw;
+    padding-bottom: 20px;
+    border: solid 1px rgb(26, 133, 255);
+}
+#main {
+    padding: 0 !important;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#main-screen input {    
+    border-radius: 4px;
+    background: rgb(124, 124, 124);
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+#main-screen {
+    height: 10%;
+}
+#keyboard {
+   height: calc(70vh); 
+   width: inherit; 
+   display: grid;
+   grid-template-columns: calc(80%) calc(17%);
+   grid-column-gap: 3%;   
+}
+#numbers{
+    display: grid;
+    height: inherit;
+    grid-template-columns: repeat(3, calc(33.3%));    
+    grid-template-rows: repeat(4, calc(22.5%));
+    grid-row-gap: calc(.8%);
+    grid-column-gap: calc(.3%);     
+}
+#numbers div, #signs div {  
+    padding: 1.3px;  
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    border: inset;
+    cursor: pointer;
+    transition: z-index .1s, scale .8s, color .3s
+}
+#numbers div p, #signs div button {
+    background: inherit;
+    color: inherit;
+    font-size: 18px;
+    border: none;
+} 
+#signs {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat( 5, calc(17.61%));
+    grid-gap: calc(.8%);
+}
+#numbers, #signs {
+    padding: 1%;    
+   
+}
+#keyboard div, #keyboard div p, #keyboard div button {
+    cursor: pointer;
+}
+#numbers div:hover {
+    background-color: rgb(77, 77, 179);
+    color: whitesmoke;
+    transform: translateY(-4px);
+    z-index: 3;
+    scale: 1.1;
+}
+#signs div:hover {
+    background-color: rgb(139, 139, 139);
+    transform: translateY(-4px);
+    color: white;
+
+}
+#output {
+    direction: ltr;
+    text-align: right;
+    font-size: 23px;
+}
